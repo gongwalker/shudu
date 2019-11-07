@@ -20,13 +20,10 @@ function isRepeat(arr){
     return false;
 }
 
-//判断数组之和是否为非45
+//判断数组序列是否正确
 function isAll(arr){
-    var sum = 0;
-    for(var i=0;i<9;i++){
-        sum += arr[i];
-    }
-    return sum==45 ? false : true;
+    var temp = '[1,2,3,4,5,6,7,8,9]';
+    return arr.sort().toString() == temp ? false : true;
 }
 
 //arr 待检测的组数
@@ -71,7 +68,7 @@ function colsCheck(arr,type){
     return true;
 }
 
-//列检测(有没有重复数据)
+//宫检测(有没有重复数据)
 //参数 arr数独二维数组
 //没有重复数据返回 true,有重复数据返回 false
 function blockCheck(arr,type){
